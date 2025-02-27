@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.materialdesignicons.com/4.2.95/css/materialdesignicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined|Material+Icons"
+    />
+    <title>cadastro</title>
+  </head>
+  <body
+   
+    class="fundo"
+  >
+    <div class="painel">
+      <div class="terreno">
+        <div class="esquerda"  style="
+      background-image: url('img/Home.jpg');">
+          <div class="campo">
+              <img
+              src="img/logo.png"
+              alt=""
+              width="250px"
+            />
+            <h1 class="logTitle" >Questione</h1>
+          </div>
+        </div>
+        <div class="direita">
+          <div class="area">
+            <h1 class="log-title">Cadastre-se</h1>
+            <span class="line"></span>
+            <form
+              class="log-form"
+              method="POST"
+              data-testid="form"
+              autocomplete="on"
+              action="index.html"
+            >
+            <div class="flex-input"> 
+              <div class="wrap-input ">
+                <input
+                  class="input-form"
+                  type="name"
+                  name="name"
+                  id="name"
+                  aria-label="name"
+                  value=""
+                  required=""
+                  oninput="validateInputs()"
+                />
+                <span class="focus-input-form" data-placeholder="Nome Completo"></span>
+              </div>
+              <div class="wrap-input ">
+                <input
+                  class="input-form"
+                  type="email"
+                  name="email"
+                  id="email"
+                  aria-label="email"
+                  value=""
+                  required=""
+                  oninput="validateInputs()"
+                />
+                <span class="focus-input-form" data-placeholder="E-mail"></span>
+              </div>
+              <div class="wrap-input ">
+                <input
+                  class="input-form"
+                  type="password"
+                  name="password"
+                  required=""
+                  oninput="validateInputs()"
+                  id="password"
+                />
+                <span class="focus-input-form" data-placeholder="Senha"></span>
+                <div id="icon" tabindex="-1" onclick="eyeHide()"></div>
+              </div>
+              <!-- <div class="wrap-input ">
+                <input
+                  class="input-form"
+                  type="password"
+                  name="password"
+                  id="password"
+                  required=""
+                  oninput="validateInputs()"
+                />
+                <span class="focus-input-form" data-placeholder="Confirmar Senha"></span>
+                <div id="icon" tabindex="-1" onclick="eyeHide()"></div>
+              </div> -->
+            </div>
+                         
+            <div class="btt-div">
+                <button class="btnLog" type="submit" >
+                    <!--disabled=""-->
+                    Entrar
+                </button>
+                <a href="login.html"  class="btnCria btnCria-filled" >
+                  <!--disabled=""-->
+                  <svg stroke="currentColor" fill="none" stroke-width="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="svg-desloque" width="24" height="24">
+                    <path d="M9.16669 2.5L8.61452 2.69487C6.46558 3.45333 5.39109 3.83257 4.77889 4.69785C4.16669 5.56313 4.16669 6.70258 4.16669 8.9815V11.0185C4.16669 13.2974 4.16669 14.4368 4.77889 15.3022C5.39109 16.1674 6.46558 16.5467 8.61452 17.3052L9.16669 17.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"></path>
+                    <path d="M17.5 10.0001H9.16669M17.5 10.0001C17.5 9.41658 15.8381 8.32636 15.4167 7.91675M17.5 10.0001C17.5 10.5836 15.8381 11.6738 15.4167 12.0834" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                  <div class="textConta">Já possui uma conta?
+                    <span class="spanConta">Entre na plataforma</span>
+                  </div>
+                  <svg stroke="currentColor" fill="none" stroke-width="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="svg-seta" width="16" height="16">
+                    <path d="M7.50004 5C7.50004 5 12.5 8.68242 12.5 10C12.5 11.3177 7.5 15 7.5 15" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </a>
+            </div>
+             
+             <!-- <div class="div-btt">
+                  <a
+                  class="social-link social-button btt-text"
+                  id="button-new"
+                  type="button"
+                  href="login.html"
+                >
+                  <span class="button-span">Criar conta</span>
+                </a>
+                <button
+                  class="log-button--filled social-button"
+                  id="button-next"
+                  type="submit"
+                >
+                  <span class="button-span">Entrar</span>
+                </button>
+
+             </div>  -->
+             
+              <br />
+              <div class="check-link">
+                <p  textlink="Política de Privacidade" >Ao se cadastrar, você aceita nossos <a class="aTermos" href="#" target="_blank">termos de uso</a> e a nossa <a class="aTermos" href="#" target="_blank">política de privacidade</a>.</p>
+                </p>
+              </div> 
+            </form>
+           
+            <div class="log-links">
+              <h2 class="log-subtitle" id="or-sign__title">Ou entre com</h2>
+              <div class="icone">
+                <a
+                href="https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?client_id=503929086445-94ohkbpdr8fqoffi7urhtfn9c0ifthvp.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fauth.kodular.io%2F_%2Fs%2Fcomplete%2Fgoogle-oauth2%2F&state=wHcQPok1urG0qnPYQuOVMnTlKFIbCIC0&response_type=code&scope=openid%20email%20profile&prompt=select_account&service=lso&o2v=1&flowName=GeneralOAuthFlow"
+        
+                  href="#"
+                  class="social-button social-link btt-borda"
+                  id="btt-action"
+                  type="submit"
+                >
+                <svg
+                class="svg"
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                width="1em"
+                height="1em"
+                viewBox="0 0 18 18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.874 2.684-6.615z"
+                  fill-rule="evenodd"
+                  fill-opacity="1"
+                  fill="#4285f4"
+                  stroke="none"
+                ></path>
+                <path
+                  d="M9.003 18c2.43 0 4.467-.806 5.956-2.18L12.05 13.56c-.806.54-1.836.86-3.047.86-2.344 0-4.328-1.584-5.036-3.711H.96v2.332C2.44 15.983 5.485 18 9.003 18z"
+                  fill-rule="evenodd"
+                  fill-opacity="1"
+                  fill="#34a853"
+                  stroke="none"
+                ></path>
+                <path
+                  d="M3.964 10.712c-.18-.54-.282-1.117-.282-1.71 0-.593.102-1.17.282-1.71V4.96H.957C.347 6.175 0 7.55 0 9.002c0 1.452.348 2.827.957 4.042l3.007-2.332z"
+                  fill-rule="evenodd"
+                  fill-opacity="1"
+                  fill="#fbbc05"
+                  stroke="none"
+                ></path>
+                <path
+                  d="M9.003 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.464.891 11.428 0 9.002 0 5.485 0 2.44 2.017.96 4.958L3.967 7.29c.708-2.127 2.692-3.71 5.036-3.71z"
+                  fill-rule="evenodd"
+                  fill-opacity="1"
+                  fill="#ea4335"
+                  stroke="none"
+                ></path>
+               </svg>
+                </a>
+              </div> 
+              
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      
+      let inputs = document.getElementsByClassName('input-form')
+      for (let input of inputs) {
+        input.addEventListener('blur', function () {
+          if (input.value.trim() != '') {
+            input.classList.add('has-val')
+          } else {
+            input.classList.remove('has-val')
+          }
+        })
+      }
+      
+      function eyeHide() {
+  if (password.type == 'password') {
+    password.setAttribute('type', 'text')
+    icon.classList.add('hide')
+  } else {
+    password.setAttribute('type', 'password')
+    icon.classList.remove('hide')
+  }
+}
+
+    </script>
+  </body>
+</html>
